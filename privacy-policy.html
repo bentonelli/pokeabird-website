@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Poke-A-Bird</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="bird-layer"></div>
+
+  <div class="policy-wrapper">
+
+    <div class="policy-header">
+      <a class="policy-back" href="index.html">&lt; Back to Home</a>
+      <h1 class="policy-title">PRIVACY POLICY</h1>
+      <p class="policy-date">Effective Date: March 31, 2026</p>
+    </div>
+
+    <div class="policy-body">
+
+      <h2>1. Overview</h2>
+      <p>
+        Poke-A-Bird ("the Game") is a bird-collecting mobile game developed by Benjamin Tonelli ("we", "us", or "our"). This Privacy Policy explains what information, if any, is collected when you use the Game, and how we handle it.
+      </p>
+      <p>
+        We are committed to protecting your privacy. Poke-A-Bird is designed to be enjoyed without collecting personal information.
+      </p>
+
+      <div class="policy-divider"></div>
+
+      <h2>2. Information We Collect</h2>
+      <p>
+        Poke-A-Bird does not collect, store, or transmit any personally identifiable information. Specifically:
+      </p>
+      <ul>
+        <li>We do not collect your name, email address, or any contact information.</li>
+        <li>We do not collect location data.</li>
+        <li>We do not collect device identifiers or advertising IDs.</li>
+        <li>We do not use analytics or tracking services.</li>
+        <li>All game progress and data is stored locally on your device.</li>
+      </ul>
+
+      <div class="policy-divider"></div>
+
+      <h2>3. Third-Party Services</h2>
+      <p>
+        The Game is distributed through the Apple App Store. Apple may collect certain data as part of the App Store platform and in-app purchase infrastructure. Please refer to Apple's Privacy Policy for details on their data practices.
+      </p>
+      <p>
+        We do not integrate any third-party analytics, advertising networks, or social media SDKs.
+      </p>
+
+      <div class="policy-divider"></div>
+
+      <h2>4. Children's Privacy</h2>
+      <p>
+        Poke-A-Bird is appropriate for all ages. Because we do not collect any personal information from any users, no special provisions are required for users under the age of 13. We do not knowingly collect data from children or any other users.
+      </p>
+
+      <div class="policy-divider"></div>
+
+      <h2>5. Data Security</h2>
+      <p>
+        Since no personal data is collected or transmitted, there is no user data stored on our servers to secure. Your game data remains on your device and is subject to your device's own security measures.
+      </p>
+
+      <div class="policy-divider"></div>
+
+      <h2>6. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. We encourage you to review this page periodically.
+      </p>
+
+      <div class="policy-divider"></div>
+
+      <h2>7. Contact Us</h2>
+      <p>
+        If you have any questions or concerns about this Privacy Policy, please contact us at:
+      </p>
+      <p>
+        <a href="mailto:pokeabirdgame@gmail.com">pokeabirdgame@gmail.com</a>
+      </p>
+
+    </div>
+
+  </div>
+
+  <script>
+    const BIRDS = [
+      { bg: "#dce8f0", src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABM0lEQVR4AeyTSw7CMAxEgTvAsWDDMdnAseAQoFdpimWlcdyGz6JIo9ipPX41sNv8+LMCrBv47w0c9vunV+8/zeQGGNx7WMlvBGCglS0+Hc9jSs2YdAgGgMj0ert0GFW2GADuj8fWqlz6vo2A35VxNAD4MsH4e5sDIdn7bFwEyJosAekCIOA5IF0BBJI5qwD8FjJmqmUTiqOzChA11563QnwMADggJPKSQoC5X4MfNgUSAnijpTkg1qMJoMcW8JDSADTQzDlXvDny/U0bUFMGglqkXp0eIgWAScmUeytbY2NbozgNoEZOzBExIkbEVtwh3bEFRL4IAIOMgEC256sAGgwEIk8DaHUy8DmmGTUDMAjJnBjZXHHmbAbAlLeWSjl3WTUDMNiaR7mtrcXNADWT2rPo2QsAAP//80cwhwAAAAZJREFUAwDnkqNBh6zgXQAAAABJRU5ErkJgggAA" },
+      { bg: "#e8e0d0", src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA/klEQVR4AeyUMQrCQBBFN+mVHMDCVrHwIBaC5xQsPIiFaGvhAYL2rvMJswYjyc7siggjfCfZZPe//UmmdD/+GYAlYAn8fwL1eepZmpaSlACMYVrNLq48Ld1tu/Y4lygJgI0IxD3mBzfe7Aoei61qADIV7/YTlBbAu9G+s54GSgOQZedMLwKor0dPaubeV01N/JcA+GqycBBFnWj7mh4LEGLPaQ6MGIBhc7yQJOoH2T/DYA7attB4IB6jRyM2x9yhBHhR1AI7ZGEyGg8gtOZYYwgA98AcNQgtF+btGi4KD2IAOkvCHIPvFWNSqQCkJn33G4AlYAlYAl9PoK8J4doTAAD//+nW+g4AAAAGSURBVAMA651JQWK3A74AAAAASUVORK5CYIIA" },
+      { bg: "#e8f0e0", src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABYElEQVR4AeyVsc3CMBCFnb/7Z4ABKFgBGgrEAqxAwQYUlGxAwQIUSNSIggZqOgoWYAbK4BdxyHJs39kxogni5cz5fO/LBSl/6sefFqCdQJYJTEbj0lTM/7oxAIxtQ1fOrqHfjQBso8PpWPVdTG/qsumUUJUIXBoB2H01UJVa7fpqMHsUUJUIXJIBtFnp67vfbX1btXwSgGm+6J0VRJ1jzHEmCQAHIdMYa+i67CroMv8vUcMpGQBmXHMJRDSAOX4OAPscRBRArDkAOIkBTHPJ+Dlj2hcD0IHcMRog593jZkQANP7c5iIAMkfxNxScgG2+ug+jGQbrZxE65AWwzfWbroBCzVL2vAAwg9CUItbcHaGGJKn1AlAT05xyaPyWesfCiJ8c1YciCxA6rPfwfO2XjiunS93fpgDo6jJ05VBbUw4AampOAmsRRC4AmEEEQ2uKlK/FXAC1xtJEC/D1CXCP4gUAAP//2rxBYQAAAAZJREFUAwD9R3JBq2lUIwAAAABJRU5ErkJgggAA" },
+      { bg: "#d8d8e8", src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABnElEQVR4AeyUsUoEMRRFM3ZbWKz24i/YWYqdrWhrp36BCH6AIH6B2tkqtnZiaecviL1uYbHlyBm4SwjJ5mWyIC6zcPclmeTd8zLJrLg//g0Aww78/x0YXf60oUouVvUOjK43Or/73S8nAdQNGv6qAb4nk0YQp3tbnSX9tfG4Rd3AnL9qAKqdnn06zG+e32dWgD3dnbjXx/MWzR4EjSoAzJVPEPQBofr941u3c3DVIMZj6g3gmysxELQPtzcbdgDRn6feAKmkRy/r7uHto009D8d7AfjVc+CkMLmlXwxAdRgqOe9b0hiRecScigE47XrXgLDlEmZ8C4hWFQGw9b45lVuNUvOKAKgOkQwQKqeNGEe0S2QGoHoSx0xjxlxF5udkBiCRb05/ETIBqHoZUjFSP4zW6lmXBeCTykRperHaYIA0psgNiY3reSzOBaByDhvXjcWYEyXMkIz59IbAmpuKSQA/ERChuRIyT8Z+W89zMQqQq9xPijl9IlKbaFEUQAtJmKpcc2pjFABTVJvcsj4KYFm4qDkDwPLvQO6s/AIAAP//1KqSlwAAAAZJREFUAwAbQcdBxUJsiAAAAABJRU5ErkJgggAA" },
+      { bg: "#dce4ec", src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA4klEQVR4AexUMQ6DMAwMnbvyCaR+i60PqJhRH9CNb1XiE6zdqS8SVhCY2pYqFiNOjp3EdzpILunkJwSEA+FAOOBxYKa7qwSl/tcqAMTM9pmmdG/b+Qi8WBhYBGTyW9MkEANCTy6/hqHiRBhYBORm73FM17rOeHTdpi1IF2wmdwoWATvb16Vn368LiswkALaXAGEJcia7pODlJSYBHgJmEgYmAeghiZDq2HMEswA0IzL8hBXFBSi74BGA44hvjQhSxDJHTQ2PAJCBQIqYU8MjQN1cszAEhAPhQDgQDvzdgV/X8RcAAP//iUrARAAAAAZJREFUAwAxtEVBsHdoIAAAAABJRU5ErkJgggAA" }
+    ];
+
+    function randomBetween(a, b) { return a + Math.random() * (b - a); }
+
+    class FloatingBird {
+      constructor(layer) {
+        const bird = BIRDS[Math.floor(Math.random() * BIRDS.length)];
+        this.el = document.createElement('img');
+        this.el.className = 'floating-bird';
+        this.el.src = bird.src;
+        const size = Math.round(randomBetween(40, 72));
+        this.el.style.width = size + 'px';
+        this.el.style.height = size + 'px';
+        this.x = randomBetween(0, window.innerWidth - size);
+        this.y = randomBetween(0, window.innerHeight - size);
+        const speed = randomBetween(0.2, 0.8);
+        const angle = randomBetween(0, Math.PI * 2);
+        this.vx = Math.cos(angle) * speed;
+        this.vy = Math.sin(angle) * speed;
+        this.size = size;
+        this.bobOffset = randomBetween(0, Math.PI * 2);
+        this.t = 0;
+        this.el.style.transform = `translate(${this.x}px, ${this.y}px)`;
+        layer.appendChild(this.el);
+      }
+      update() {
+        this.t++;
+        this.x += this.vx;
+        this.y += this.vy + Math.sin(this.t * 0.013 + this.bobOffset) * 0.2;
+        const maxX = window.innerWidth - this.size;
+        const maxY = window.innerHeight - this.size;
+        if (this.x < 0) { this.x = 0; this.vx *= -1; }
+        if (this.x > maxX) { this.x = maxX; this.vx *= -1; }
+        if (this.y < 0) { this.y = 0; this.vy *= -1; }
+        if (this.y > maxY) { this.y = maxY; this.vy *= -1; }
+        this.el.style.transform = `translate(${this.x}px, ${this.y}px) scaleX(${this.vx < 0 ? -1 : 1})`;
+      }
+    }
+
+    const layer = document.getElementById('bird-layer');
+    const birds = Array.from({ length: 10 }, () => new FloatingBird(layer));
+    function animate() { birds.forEach(b => b.update()); requestAnimationFrame(animate); }
+    animate();
+  </script>
+
+</body>
+</html>
