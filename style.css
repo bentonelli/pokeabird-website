@@ -134,6 +134,10 @@ body::after {
   letter-spacing: 2px;
   margin-bottom: 20px;
   text-transform: uppercase;
+  background: var(--panel);
+  border: 2px solid var(--border);
+  padding: 8px 16px;
+  display: inline-block;
 }
 
 .game-title {
@@ -175,6 +179,10 @@ body::after {
   font-size: clamp(20px, 3.5vw, 28px);
   color: var(--text);
   letter-spacing: 1px;
+  background: var(--panel);
+  border: 2px solid var(--border);
+  padding: 8px 16px;
+  display: inline-block;
 }
 
 /* Button panel */
